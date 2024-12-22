@@ -5,9 +5,16 @@ pip install -r requirements.txt
 ```
 You can also conda install the requirements you need from requirements.txt if you choose.
 
-## Run the Algorithms & Final Results
-The experiment files (Weighbor_experiment.py, FastNJ_experiment.py, ...) are self-containing and hold all necessary functions and data to run a simulated experiment for that specific algorithm.
-Specifically, the functions include simulating a simplified birth-death tree, simulating sequences under Jukes-Cantor, computing pairwise distances, the implementation of the NJ-variant, computing Robinson-Foulds (RF) distance, assembling the tree and generating the Newick representation, and running the experiment for multiple dataset sizes.
-All you need to do is run the program, which will run the main function. This will ultimately print out the average runtime and its st. dev across all runs, as well as the average RF distance and its st. dev across all runs.
+## Synthetic Benchmark
+
+The synthetic experiment scripts are in folder `benchmark_scripts`. The experiment files (Weighbor_experiment.py, FastNJ_experiment.py, ...) are self-containing and hold all necessary functions and data to run a simulated experiment for that specific algorithm. Simply execute a script (no arguments) to run an experiment. Performance metrics will be printed to standard out.
+
+The experiment outputs from our testing can be found in `synth_data`.
+
+The plots from our experimental data as well as the script generating the plots can be found in folder `benchmark_figures`.
 
 ## Using Real Data
+
+See folder `TreeBASE` for extracting sequence and tree data from TreeBASE. Inside includes a README detailing the process as well as the specific TreeBASE resources we used.
+
+See folder `RealData` for how we conducted analysis on our extracted data from TreeBASE. Inside includes a README for how to run the scripts.
